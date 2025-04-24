@@ -1,11 +1,11 @@
 ﻿using FluentAssertions;
 
-namespace Quantum.RingBuffer;
+namespace Quantum.RingBuffer.Tests;
 
 public class SequencerTests
 {
     [Fact]
-    public void createIntegerSequncer()
+    public void createIntegerSequencer()
     {
         var sequencer = new Sequencer(maxValue: 10);
         sequencer.MaxValue.Should().Be(10);

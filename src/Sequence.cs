@@ -1,10 +1,8 @@
 ﻿namespace Quantum.RingBuffer;
 
-public class Sequence
+public class Sequence(int value)
 {
-    public int Value { get; }
-
-    public Sequence(int value) => Value = value;
+    public int Value { get; } = value;
 
     public override bool Equals(object? obj)
     {

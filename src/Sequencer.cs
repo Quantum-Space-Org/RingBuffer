@@ -1,12 +1,9 @@
 ﻿namespace Quantum.RingBuffer;
 
-public class Sequencer
+public class Sequencer(int maxValue)
 {
     private int _currentSequence;
-    public int MaxValue { get; }
-
-    public Sequencer(int maxValue)
-        => MaxValue = maxValue;
+    public int MaxValue { get; } = maxValue;
 
     public Sequence Next()
     {

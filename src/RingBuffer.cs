@@ -1,17 +1,12 @@
 ﻿namespace Quantum.RingBuffer;
 
-public class RingBuffer<T>
+public class RingBuffer<T>(string name)
 {
     private int _capacity;
     private T _message;
-    public string Name { get; }
+    public string Name { get; } = name;
     public int Start { get; set; }
     public int End { get; set; }
-
-    public RingBuffer(string name)
-    {
-        Name = name;
-    }
 
     public void SetCapacity(int capacity)
     {
